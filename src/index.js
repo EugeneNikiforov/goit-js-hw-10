@@ -27,10 +27,14 @@ function sufficientSample(array) {
         <img src="${flags.svg}" alt="" width="20px" height="20px">${name.official}</p>`
     }).join("");
 };
+function overSampling(array) {
+    array = [];
+}
 function succesCountry(array) {
     console.log(array)
     if (array.length > 10) {
-    return Notiflix.Notify.info("Too many matches found. Please enter a more specific name.");
+        throw Notiflix.Notify.info("Too many matches found. Please enter a more specific name.");
+        return countryFlag.innerHTML = overSampling(array);
     } if (array.length > 2) {    
         return countryFlag.innerHTML = sufficientSample(array);
     };
